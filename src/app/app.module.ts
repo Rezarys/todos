@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 
 import { TodoDataService } from './todo-data.service';
+import { NgDragDropModule } from 'ng-drag-drop';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { TodoDataService } from './todo-data.service';
   imports: [
     BrowserModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgDragDropModule
   ],
   providers: [TodoDataService],
   bootstrap: [AppComponent]

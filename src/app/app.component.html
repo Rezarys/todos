@@ -4,8 +4,8 @@
     <input class="new-todo" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
   </header>
   <section class="main" *ngIf="todos.length > 0">
-    <ul class="todo-list">
-      <li *ngFor="let todo of todos" [class.completed]="todo.complete" @ease-in-out @move-up>
+    <ul class="todo-list" droppable>
+      <li *ngFor="let todo of todos" [class.completed]="todo.complete" draggable @ease-in-out @move-up>
         <div class="view">
           <input class="toggle" type="checkbox" (click)="toggleTodoComplete(todo)" [checked]="todo.complete">
           <label class="atodo">{{todo.title}}</label>
